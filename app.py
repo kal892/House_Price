@@ -14,7 +14,7 @@ with open("RF_model.pkl","rb") as file:
 df = pd.read_csv("cleaned_df.csv")
 
 with st.sidebar:
-    st.title("HOUSE PRICE PREDICTION APP")
+    st.title("SmartEstate: HOUSE PRICE PREDICTION")
     st.image("house_logo.png")
 
 def get_encoded_loc(location):
@@ -42,4 +42,5 @@ with st.container(border=True):
         pred = float(f"{pred[0]:.2f}")
         c4,c5,c6 = st.columns([1.9,2,1])
         with c5:
+
             st.subheader(f"Predicted Price: Rs. {pred*100000}")
